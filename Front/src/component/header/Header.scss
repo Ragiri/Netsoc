@@ -1,0 +1,56 @@
+@import '../../fonts.scss';
+@import '../../mixin.scss';
+
+header {
+	height: 5rem;
+	background: linear-gradient(to right, #c998f8, #9cb6fd);;
+	@include flex-center;
+	@include shadow;
+	color: #FFFFFF;
+	.header-logo {
+		cursor: pointer;
+	}
+	.header-link {
+		margin: 0 0.5rem;
+		@include regular-text-medium;
+		&:hover {
+			color: #ac53ff;
+		}
+	}
+	.header-btn {
+		@include regular-text-medium;
+		@include flex-center;
+
+		margin: 0 0.5rem;
+		padding: 8px 24px;
+		width: 6rem;
+		height: 2.5rem;
+		border-radius: 2rem;
+
+		&.primary {
+			background: linear-gradient(to right, #c998f8, #9cb6fd);
+		}
+		&.secondary {
+			border: solid #c998f8 1px;
+		}
+	}
+}
+
+// Desktop version
+header {
+	.desktop-header {
+		display: flex;
+		font-size: 50px;
+		width: 100%;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0 2rem;
+		.header-nav {
+			display: flex;
+		}
+		.header-login-create {
+			@include flex-center;
+		}
+	}
+}
+

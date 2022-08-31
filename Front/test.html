@@ -1,0 +1,54 @@
+<h2>Installation</h2>
+
+<h3>Script</h3>
+
+<p>In order to initialize the Netsoc ads, script must first be integrated.</p>
+
+<p>In an HTML file, the script may ben called by the following tag, in the <code>&lt;head&gt;&lt;/head&gt;</code> section:</p>
+
+<p><code>
+&lt;script type=&quot;text/javascript&quot;src=&quot;https://localhost:3000/script/netsoc-pub.min.js&quot;&gt;&lt;/script&gt;
+</code></p>
+
+<p>Otherwise, the script can be injected by the following Javascript functions:</p>
+
+<p><code>javascript
+const script = document.createElement(&quot;script&quot;);
+script.src = &quot;https://localhost:3000/script/netsoc-pub.min.js&quot;;
+script.async = true;
+document.head.appendChild(script);
+</code></p>
+
+<p>If not used in your project, the netsoc script injects by itself two other scripts:</p>
+
+<ul><li>JQuery (https://code.jquery.com/jquery-3.4.1.min.js)</li></ul>
+
+<h3>Ad container</h3>
+
+<p>The Ads needs a <code>&lt;div&gt;</code> tag with the specific &quot;width_ad&quot; or &quot;height_ad&quot; id in order to be deployed:</p>
+
+<p><code>javascript
+&lt;div id=&quot;width_ad&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;height_ad&quot;&gt;&lt;/div&gt;
+</code></p>
+
+<h3>Like Button</h3>
+
+<p>The Like button needs a <code>&lt;div&gt;</code> tag with the specific &quot;like_add&quot; id in order to be deployed:</p>
+
+<p><code>javascript
+&lt;div id=&quot;like_add&quot;&gt;&lt;/div&gt;
+</code></p>
+
+<p>To register your site and add likes, The Like button have to know some information.
+To add this information you have to put option tag:</p>
+
+<p><code></code>`javascript
+&lt;div
+  id=&quot;like_add&quot;
+  netsoc_name=&quot;your site/add title&quot;
+  netsoc_desc=&quot;your description&quot;
+  netsoc_img_url=&quot;url of an image&quot;</p>
+
+<blockquote><p>&lt;/div&gt;
+<code></code>`</p></blockquote>

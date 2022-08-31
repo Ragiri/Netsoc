@@ -1,0 +1,135 @@
+@import "../../fonts.scss";
+@import "../../mixin.scss";
+
+.doc {
+  .doc-page {
+    .doc-header {
+      .tabs {
+        margin-bottom: 2.5rem;
+        button {
+          border: none;
+          background: none;
+          color: #9cb6fd;
+          @include large-text-medium;
+        }
+      }
+    }
+    .doc-content-card {
+      .doc-grid {
+        display: grid;
+		place-items: center;
+        grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
+        grid-gap: 2rem;
+        .doc-grid-item {
+          padding: 2rem;
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+		  background-color: #fff;
+          box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+          justify-content: space-between;
+          width: 80%;
+          border-radius: 0.4rem;
+          border: 1px solid;
+          font-size: 0.8rem;
+          transition: all 1s;
+          height: 100%;
+          @include small-text-medium;
+          .doc-summary {
+            @include flex-center;
+            flex-direction: column;
+          }
+          .doc-btn {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+          }
+          h4 {
+            align-self: center;
+            @include large-text-medium;
+          }
+          &:hover {
+            background: rgba(#9cb6fd, 0.5);
+            transition: all 1.5s;
+          }
+
+          a {
+            @include main-button;
+            width: 60%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.container_doc {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  margin-left: 15%;
+  overflow: hidden;
+  width: 70%;
+  height: 50%;
+  max-width: 100%;
+}
+
+.doc-summary {
+	margin-bottom: 1rem;
+	.summary {
+		@include regular-text-medium;
+		color: #8a55bb;
+	}
+	.post-date {
+		@include small-text-light;
+		color: #9cb6fd;
+	}
+}
+
+.doc-text {
+	@include large-text-medium;
+	color: #5400a2;
+	font-size: 24px;
+}
+
+.doc-page {
+	position: relative;
+	.navigation {
+		position: absolute;
+		margin: 0 2rem;
+		button {
+			@include regular-text-light;
+			color: #000000;
+			border: none;
+			background: none;
+			img {
+				width: 1.2rem;
+				margin-right: 0.5rem;
+			}
+		}
+	}
+	.doc-content {
+		@include flex-center;
+		flex-direction: column;
+		width: 70%;
+		margin: 2rem auto;
+		.doc-content-header {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: flex-start;
+			.title {
+				@include large-text-medium;
+				color: #000000;
+				margin-bottom: 2.5rem;
+			}
+		}
+		.doc-content-body {
+			border: 1px solid #c998f8;
+			@include shadow;
+			width: 100%;
+			padding: 2.5rem 5rem;
+		}
+	}
+}
